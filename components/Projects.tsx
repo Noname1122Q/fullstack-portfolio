@@ -125,7 +125,7 @@ const Projects = () => {
                     </Link>
                   )}
                   {project.hostedLink != "" && (
-                    <Link href={project.githubLink}>
+                    <Link href={project.hostedLink}>
                       <Link2 className="size-5 text-gray-400 hover:text-white hover:cursor-pointer transition-colors duration-200" />
                     </Link>
                   )}
