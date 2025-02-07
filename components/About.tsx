@@ -12,10 +12,10 @@ const About = () => {
           applications.
         </p>
         <p className="py-1">
-          Currently pursuing a{" "}
-          <b>Bachelor's in Computer Science at BITS Pilani</b>, I&apos;m seeking
-          an internship to gain industry experience and further enhance my
-          development skills.
+          Currently pursuing a
+          <b>Bachelor&apos;s in Computer Science at BITS Pilani</b>, I&apos;m
+          seeking an internship to gain industry experience and further enhance
+          my development skills.
         </p>
         <p className="py-1">
           In my free time, I enjoy playing chess—aspiring to become a FIDE-rated
