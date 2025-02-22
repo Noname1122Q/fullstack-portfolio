@@ -36,20 +36,6 @@ const projectDetails = [
     isUnderDevelopment: false,
   },
   {
-    title: "Artsy Home Decor",
-    image: "/projects/ecom.png",
-    stack: ["Next", "Authjs", "Postgres"],
-    points: [
-      "Website for home decor startup that I am planning to launch.",
-      "Best authentication practices including 2FA.",
-      "Seperate dashboards for admin and customer.",
-      "Modular UI components to provide an easy to update UI.",
-    ],
-    hostedLink: "",
-    githubLink: "https://github.com/Noname1122Q/artsy-store",
-    isUnderDevelopment: true,
-  },
-  {
     title: "Effortless UI",
     image: "/projects/cl.png",
     stack: ["Next", "ShadcnUI"],
