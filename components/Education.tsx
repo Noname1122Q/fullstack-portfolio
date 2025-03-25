@@ -1,7 +1,4 @@
-import { ChevronDown } from "lucide-react";
 import React from "react";
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "./ui/dialog";
-import Image from "next/image";
 
 const Education = () => {
   return (
@@ -40,7 +37,6 @@ const Education = () => {
             <p className="text-xs text-slate-700">2024 - 2028</p>
           </div>
         </div>
-        
       </div>
     </div>
   );

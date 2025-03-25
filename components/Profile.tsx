@@ -7,17 +7,6 @@ import { toast } from "sonner";
 import ProfileImage from "@/assets/profile.png";
 import Image from "next/image";
 
-// TODO
-// add project pictures
-// get project links (github)
-// get projects link (hosted)
-
-// add picture to linked in
-// Update linked in
-// host portfolio
-// update resume
-// update portfolio
-
 const Profile = () => {
   const onEmailCopy = () => {
     navigator.clipboard
