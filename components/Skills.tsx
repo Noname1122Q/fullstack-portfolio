@@ -1,26 +1,56 @@
 import React from "react";
 import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
+import {
+  BookOpen,
+  Code,
+  Computer,
+  Database,
+  FileCode,
+  Globe,
+  Server,
+  Terminal,
+} from "lucide-react";
 
 const skills = [
   {
     title: "Languages",
-    items: ["Javascript", "Typescript", "Python", "C", "C++"],
+    items: [
+      { name: "Javascript", icon: <FileCode size={14} className="mr-1" /> },
+      { name: "Typescript", icon: <Code size={14} className="mr-1" /> },
+      { name: "Python", icon: <Terminal size={14} className="mr-1" /> },
+      { name: "Java", icon: <Computer size={14} className="mr-1" /> },
+    ],
     classes: "bg-blue-500 text-sky-400",
   },
   {
     title: "Frameworks",
-    items: ["Next", "React", "Hono", "Express"],
+    items: [
+      { name: "Next", icon: <Globe size={14} className="mr-1" /> },
+      { name: "React", icon: <Code size={14} className="mr-1" /> },
+      { name: "Hono", icon: <Server size={14} className="mr-1" /> },
+      { name: "Express", icon: <Terminal size={14} className="mr-1" /> },
+    ],
     classes: "bg-green-500 text-[#90EE90]",
   },
   {
     title: "Backend",
-    items: ["Nodejs", "REST APIs", "Clerk", "WebSockets"],
+    items: [
+      { name: "Nodejs", icon: <Server size={14} className="mr-1" /> },
+      { name: "REST APIs", icon: <Globe size={14} className="mr-1" /> },
+      { name: "Clerk", icon: <Code size={14} className="mr-1" /> },
+      { name: "WebSockets", icon: <Terminal size={14} className="mr-1" /> },
+    ],
     classes: "bg-rose-500 text-[#F08080]",
   },
   {
     title: "Databases",
-    items: ["MongoDB", "PostgreSQL", "Prisma", "Drizzle"],
+    items: [
+      { name: "MongoDB", icon: <Database size={14} className="mr-1" /> },
+      { name: "PostgreSQL", icon: <Database size={14} className="mr-1" /> },
+      { name: "Prisma", icon: <Code size={14} className="mr-1" /> },
+      { name: "Drizzle", icon: <BookOpen size={14} className="mr-1" /> },
+    ],
     classes: "bg-purple-500 text-[#9370DB]",
   },
 ];
@@ -37,12 +67,13 @@ const Skills = () => {
               <Badge
                 key={i}
                 className={cn(
-                  "rounded-full font-bold border-none outline-none bg-opacity-40",
+                  "rounded-full font-bold border-none outline-none bg-opacity-40 ",
                   skill.classes
                 )}
                 variant={"outline"}
               >
-                {item}
+                {item.icon}
+                {item.name}
               </Badge>
             ))}
           </div>
