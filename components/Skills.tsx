@@ -16,40 +16,58 @@ const skills = [
   {
     title: "Languages",
     items: [
-      { name: "Javascript", icon: <FileCode size={14} className="mr-1" /> },
-      { name: "Typescript", icon: <Code size={14} className="mr-1" /> },
-      { name: "Python", icon: <Terminal size={14} className="mr-1" /> },
-      { name: "Java", icon: <Computer size={14} className="mr-1" /> },
+      {
+        name: "Javascript",
+        icon: <FileCode className=" size-3 md:size-4 mr-2" />,
+      },
+      { name: "Typescript", icon: <Code className=" size-3 md:size-4 mr-2" /> },
+      { name: "Python", icon: <Terminal className=" size-3 md:size-4 mr-2" /> },
+      { name: "Java", icon: <Computer className=" size-3 md:size-4 mr-2" /> },
     ],
     classes: "bg-blue-500 text-sky-400",
   },
   {
     title: "Frameworks",
     items: [
-      { name: "Next", icon: <Globe size={14} className="mr-1" /> },
-      { name: "React", icon: <Code size={14} className="mr-1" /> },
-      { name: "Hono", icon: <Server size={14} className="mr-1" /> },
-      { name: "Express", icon: <Terminal size={14} className="mr-1" /> },
+      { name: "Next", icon: <Globe className=" size-3 md:size-4 mr-2" /> },
+      { name: "React", icon: <Code className=" size-3 md:size-4 mr-2" /> },
+      { name: "Hono", icon: <Server className=" size-3 md:size-4 mr-2" /> },
+      {
+        name: "Express",
+        icon: <Terminal className=" size-3 md:size-4 mr-2" />,
+      },
     ],
     classes: "bg-green-500 text-[#90EE90]",
   },
   {
     title: "Backend",
     items: [
-      { name: "Nodejs", icon: <Server size={14} className="mr-1" /> },
-      { name: "REST APIs", icon: <Globe size={14} className="mr-1" /> },
-      { name: "Clerk", icon: <Code size={14} className="mr-1" /> },
-      { name: "WebSockets", icon: <Terminal size={14} className="mr-1" /> },
+      { name: "Nodejs", icon: <Server className=" size-3 md:size-4 mr-2" /> },
+      { name: "REST APIs", icon: <Globe className=" size-3 md:size-4 mr-2" /> },
+      { name: "Clerk", icon: <Code className=" size-3 md:size-4 mr-2" /> },
+      {
+        name: "WebSockets",
+        icon: <Terminal className=" size-3 md:size-4 mr-2" />,
+      },
     ],
     classes: "bg-rose-500 text-[#F08080]",
   },
   {
     title: "Databases",
     items: [
-      { name: "MongoDB", icon: <Database size={14} className="mr-1" /> },
-      { name: "PostgreSQL", icon: <Database size={14} className="mr-1" /> },
-      { name: "Prisma", icon: <Code size={14} className="mr-1" /> },
-      { name: "Drizzle", icon: <BookOpen size={14} className="mr-1" /> },
+      {
+        name: "MongoDB",
+        icon: <Database className=" size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "PostgreSQL",
+        icon: <Database className=" size-3 md:size-4 mr-2" />,
+      },
+      { name: "Prisma", icon: <Code className=" size-3 md:size-4 mr-2" /> },
+      {
+        name: "Drizzle",
+        icon: <BookOpen className=" size-3 md:size-4 mr-2" />,
+      },
     ],
     classes: "bg-purple-500 text-[#9370DB]",
   },
