@@ -8,27 +8,42 @@ import { SiGithub } from "react-icons/si";
 
 const projectDetails = [
   {
-    title: "Quizy",
-    stack: ["Next.js", "PostgreSQL", "Gemini AI"],
+    title: "CastClipper",
+    stack: ["Python", "Modal", "WhisperX", "Next.js", "Inngest", "GCS"],
     description:
-      "An AI-powered platform for creating and participating in quizzes.",
+      "An AI-driven tool that converts full podcast videos into short clips with subtitles and face tracking.",
     features: [
-      "Generate quizzes on any topic using AI.",
-      "Detailed score breakdowns and result analysis.",
-      "Participate in quizzes created by others.",
+      "Automated clipping, face tracking, and subtitle generation.",
+      "Backed by Python tools like WhisperX, FFmpeg, and Modal.",
+      "Frontend built with Next.js; workflow managed using Inngest.",
+    ],
+    hostedLink: "https://ai-podcast-clipper-tau.vercel.app/",
+    githubLink: "https://github.com/Noname1122Q/ai-frontend",
+    isUnderDevelopment: false,
+  },
+  {
+    title: "Quizy",
+    stack: ["Next.js", "Gemini AI", "Tailwind CSS"],
+    description:
+      "An AI-powered platform to generate and attempt quizzes on any topic.",
+    features: [
+      "Generates quizzes using Gemini AI based on user prompts.",
+      "Shows post-quiz analytics with performance breakdowns.",
+      "Responsive design with smooth and intuitive UI.",
     ],
     hostedLink: "https://quizy-flame.vercel.app/",
     githubLink: "https://github.com/Noname1122Q/Quizy",
     isUnderDevelopment: false,
   },
   {
-    title: "Recommendation Algorithm",
-    stack: ["Python", "Jupyter Notebook", "Pandas"],
-    description: "A recommendation system for personalized movie suggestions.",
+    title: "MovieMatch",
+    stack: ["Python", "Pandas", "Jupyter Notebook"],
+    description:
+      "A content-based recommendation system built for personalized movie suggestions.",
     features: [
-      "Processes large datasets efficiently.",
-      "Utilizes Pandas for advanced data manipulation.",
-      "Successfully sold for practical use.",
+      "Processes large movie datasets to match user preferences.",
+      "Uses Pandas and NumPy for data filtering and scoring.",
+      "Presents output via an interactive notebook interface.",
     ],
     hostedLink: "",
     githubLink: "https://github.com/Noname1122Q/Netflix-Recommendation",
@@ -45,7 +60,7 @@ const projectDetails = [
     ],
     hostedLink: "https://effortless-ui-wheat.vercel.app/",
     githubLink: "https://github.com/Noname1122Q/EffortlessUI",
-    isUnderDevelopment: false,
+    isUnderDevelopment: true,
   },
 ];
 
@@ -66,7 +81,7 @@ const Projects = () => {
                 )}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex flex-col">
               <p className="text-gray-300 mb-3">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.stack.map((tech, i) => (

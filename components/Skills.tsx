@@ -3,13 +3,20 @@ import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
 import {
   BookOpen,
+  Clock,
+  Cloud,
   Code,
   Computer,
   Database,
   FileCode,
+  Film,
+  GitBranch,
   Globe,
+  Layout,
   Server,
+  ShieldCheck,
   Terminal,
+  Zap,
 } from "lucide-react";
 
 const skills = [
@@ -17,59 +24,101 @@ const skills = [
     title: "Languages",
     items: [
       {
-        name: "Javascript",
-        icon: <FileCode className=" size-3 md:size-4 mr-2" />,
+        name: "JavaScript",
+        icon: <FileCode className="size-3 md:size-4 mr-2" />,
       },
-      { name: "Typescript", icon: <Code className=" size-3 md:size-4 mr-2" /> },
-      { name: "Python", icon: <Terminal className=" size-3 md:size-4 mr-2" /> },
-      { name: "Java", icon: <Computer className=" size-3 md:size-4 mr-2" /> },
+      {
+        name: "TypeScript",
+        icon: <Code className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "Python",
+        icon: <Terminal className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "Java",
+        icon: <Computer className="size-3 md:size-4 mr-2" />,
+      },
     ],
     classes: "bg-blue-500 text-sky-400",
   },
   {
-    title: "Frameworks",
+    title: "Web Development",
     items: [
-      { name: "Next", icon: <Globe className=" size-3 md:size-4 mr-2" /> },
-      { name: "React", icon: <Code className=" size-3 md:size-4 mr-2" /> },
-      { name: "Hono", icon: <Server className=" size-3 md:size-4 mr-2" /> },
       {
-        name: "Express",
-        icon: <Terminal className=" size-3 md:size-4 mr-2" />,
+        name: "React",
+        icon: <Code className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "Next.js",
+        icon: <Globe className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "Node.js",
+        icon: <Server className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "TailwindCSS",
+        icon: <Code className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "ShadCN UI",
+        icon: <Layout className="size-3 md:size-4 mr-2" />,
       },
     ],
     classes: "bg-green-500 text-[#90EE90]",
   },
   {
-    title: "Backend",
+    title: "Backend & Tools",
     items: [
-      { name: "Nodejs", icon: <Server className=" size-3 md:size-4 mr-2" /> },
-      { name: "REST APIs", icon: <Globe className=" size-3 md:size-4 mr-2" /> },
-      { name: "Clerk", icon: <Code className=" size-3 md:size-4 mr-2" /> },
       {
-        name: "WebSockets",
-        icon: <Terminal className=" size-3 md:size-4 mr-2" />,
+        name: "PostgreSQL",
+        icon: <Database className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "Prisma",
+        icon: <Code className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "Inngest",
+        icon: <Clock className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "Modal",
+        icon: <Server className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "FFmpeg",
+        icon: <Film className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "Git",
+        icon: <GitBranch className="size-3 md:size-4 mr-2" />,
       },
     ],
     classes: "bg-rose-500 text-[#F08080]",
   },
   {
-    title: "Databases",
+    title: "Others",
     items: [
       {
-        name: "MongoDB",
-        icon: <Database className=" size-3 md:size-4 mr-2" />,
+        name: "Google Cloud Storage",
+        icon: <Cloud className="size-3 md:size-4 mr-2" />,
       },
       {
-        name: "PostgreSQL",
-        icon: <Database className=" size-3 md:size-4 mr-2" />,
+        name: "Next-Auth",
+        icon: <ShieldCheck className="size-3 md:size-4 mr-2" />,
       },
-      { name: "Prisma", icon: <Code className=" size-3 md:size-4 mr-2" /> },
       {
-        name: "Drizzle",
-        icon: <BookOpen className=" size-3 md:size-4 mr-2" />,
+        name: "REST APIs",
+        icon: <Globe className="size-3 md:size-4 mr-2" />,
+      },
+      {
+        name: "Serverless",
+        icon: <Zap className="size-3 md:size-4 mr-2" />,
       },
     ],
-    classes: "bg-purple-500 text-[#9370DB]",
+    classes: "bg-yellow-500 text-yellow-300",
   },
 ];
 
@@ -85,7 +134,7 @@ const Skills = () => {
               <Badge
                 key={i}
                 className={cn(
-                  "rounded-full font-bold border-none outline-none bg-opacity-40 ",
+                  "rounded-full font-bold border-none outline-none bg-opacity-40",
                   skill.classes
                 )}
                 variant={"outline"}
