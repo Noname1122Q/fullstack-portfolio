@@ -11,10 +11,10 @@ const Info = () => {
     <div className="w-full h-screen flex-1 pt-10 px-5">
       <About />
       <Skills />
-      <Education />
-      <Certificates />
       <Experience />
       <Projects />
+      <Education />
+      <Certificates />
     </div>
   );
 };

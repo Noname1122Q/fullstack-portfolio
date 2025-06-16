@@ -102,7 +102,7 @@ const skills = [
     title: "Others",
     items: [
       {
-        name: "Google Cloud Storage",
+        name: "Google Cloud",
         icon: <Cloud className="size-3 md:size-4 mr-2" />,
       },
       {
@@ -129,12 +129,12 @@ const Skills = () => {
       {skills.map((skill, idx) => (
         <div className="flex flex-col py-2" key={idx}>
           <h3 className="text-white font-medium mb-1">{skill.title}</h3>
-          <div className="flex flex-row gap-2">
+          <div className="grid grid-cols-3 md:flex md:flex-row gap-2">
             {skill.items.map((item, i) => (
               <Badge
                 key={i}
                 className={cn(
-                  "rounded-full font-bold border-none outline-none bg-opacity-40",
+                  "rounded-full font-bold border-none outline-none bg-opacity-40 whitespace-nowrap col-span-1",
                   skill.classes
                 )}
                 variant={"outline"}
