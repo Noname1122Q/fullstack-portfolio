@@ -8,17 +8,16 @@ import { SiGithub } from "react-icons/si";
 
 const projectDetails = [
   {
-    title: "CastClipper",
-    stack: ["Python", "Modal", "WhisperX", "Next.js", "Inngest", "GCS"],
+    title: "Projectile Simulation",
+    stack: ["Spring Boot", "Next.js", "Docker", "Azure Container Apps"],
     description:
-      "An AI-driven tool that converts full podcast videos into short clips with subtitles and face tracking.",
+      "A web-based simulation tool that visualizes projectile motion based on user-defined physics parameters.",
     features: [
-      "Automated clipping, face tracking, and subtitle generation.",
-      "Backed by Python tools like WhisperX, FFmpeg, and Modal.",
-      "Frontend built with Next.js; workflow managed using Inngest.",
+      "Backend in Spring Boot calculates trajectories with physics formulas.",
+      "Plots thousands of coordinates for real-time visualization.",
     ],
-    hostedLink: "https://ai-podcast-clipper-tau.vercel.app/",
-    githubLink: "https://github.com/Noname1122Q/ai-frontend",
+    hostedLink: "https://physics-simulations-five.vercel.app/",
+    githubLink: "https://github.com/Noname1122Q/physics-simulations",
     isUnderDevelopment: false,
   },
   {
@@ -95,8 +94,8 @@ const Projects = () => {
               </div>
               <ul className="list-none space-y-1 text-gray-400 text-sm">
                 {project.features.map((feature, i) => (
-                  <li key={i} className="flex items-center">
-                    <Dot size={16} /> {feature}
+                  <li key={i} className="flex ">
+                    <Dot size={16} className="font-bold" /> {feature}
                   </li>
                 ))}
               </ul>

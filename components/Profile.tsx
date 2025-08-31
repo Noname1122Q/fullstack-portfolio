@@ -11,14 +11,16 @@ const Profile = () => {
   const onEmailCopy = () => {
     navigator.clipboard
       .writeText("uttamjangir1415@gmail.com")
-      .then(() => toast.success("Coppied to Clipboard"));
+      .then(() => toast.success("Copied to Clipboard"));
   };
 
   return (
     <div className="flex flex-col pt-10 pl-20 w-full lg:h-screen mb-8 lg:mb-0">
       <Image src={ProfileImage} alt="" className="rounded-full size-36" />
       <h1 className="text-2xl text-white font-semibold pt-4">Uttam Jangir</h1>
-      <p className="mb-3 text-sm text-gray-500">Software Developer</p>
+      <p className="mb-3 text-sm text-gray-500">
+        Software Engineer | DevOps Enthusiast
+      </p>
       <p className="text-sm text-gray-500 font-medium flex flex-row p-1">
         <MapPin className="size-4 mr-2" /> Jhunjhunu, Rajasthan, India
       </p>
@@ -49,9 +51,6 @@ const Profile = () => {
           </Link>
           <Link href={"https://www.linkedin.com/in/uttam-jangir/"}>
             <SiLinkedin className="size-5 hover:text-white transition-colors duration-200" />
-          </Link>
-          <Link href={"https://www.instagram.com/uttam_jangir1122/"}>
-            <SiInstagram className="size-5 hover:text-white transition-colors duration-200" />
           </Link>
         </div>
       </div>
