@@ -35,20 +35,6 @@ const projectDetails = [
     isUnderDevelopment: false,
   },
   {
-    title: "MovieMatch",
-    stack: ["Python", "Pandas", "Jupyter Notebook"],
-    description:
-      "A content-based recommendation system built for personalized movie suggestions.",
-    features: [
-      "Processes large movie datasets to match user preferences.",
-      "Uses Pandas and NumPy for data filtering and scoring.",
-      "Presents output via an interactive notebook interface.",
-    ],
-    hostedLink: "",
-    githubLink: "https://github.com/Noname1122Q/Netflix-Recommendation",
-    isUnderDevelopment: false,
-  },
-  {
     title: "Effortless UI",
     stack: ["Next.js", "ShadCN UI"],
     description: "A personal component library for rapid UI development.",
@@ -57,7 +43,7 @@ const projectDetails = [
       "Quick integration with third-party services.",
       "Reduces development time significantly.",
     ],
-    hostedLink: "https://effortless-ui-wheat.vercel.app/",
+    hostedLink: "",
     githubLink: "https://github.com/Noname1122Q/EffortlessUI",
     isUnderDevelopment: true,
   },
