@@ -1,36 +1,63 @@
 import React from "react";
 
 const About = () => {
+  const calculateAge = (birthDate: string) => {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birth.getDate())
+    ) {
+      age--;
+    }
+
+    return age;
+  };
+
+  const age = calculateAge("2006-09-21");
+
   return (
-    <div className="flex flex-col">
-      <h1 className="text-3xl mb-3 font-semibold text-white">About Me</h1>
-      <div className="gap-2 py-4 text-slate-400">
-        <p className="py-1">
-          I&apos;m an 19-year-old{" "}
-          <b>software developer and DevOps enthusiast</b> with strong
-          communication, development, and debugging skills. I enjoy solving
-          challenging problems, building user-friendly applications, and
-          automating the infrastructure that powers them.
+    <section className="flex flex-col max-w-3xl">
+      <h1 className="text-3xl font-semibold text-white mb-4 tracking-tight">
+        About Me
+      </h1>
+
+      <div className="space-y-4 text-slate-400 leading-relaxed text-[15px]">
+        <p>
+          I&apos;m a{" "}
+          <span className="text-white font-medium">
+            {age}-year-old Software Engineer{" "}
+          </span>
+          focused on building scalable backend systems and production-ready web
+          applications. I enjoy transforming ideas into deployable products with
+          clean architecture and thoughtful system design.
         </p>
-        <p className="py-1">
-          Currently pursuing my{" "}
-          <b>Bachelor&apos;s in Computer Science at BITS Pilani</b>, I&apos;m
-          seeking an internship to gain industry experience—whether in software
-          development or DevOps/cloud engineering—while sharpening my skills in
-          <b> CI/CD, Docker, Kubernetes, and cloud platforms</b>.
+
+        <p>
+          Currently pursuing a{" "}
+          <span className="text-white font-medium">
+            Bachelor&apos;s in Computer Science at BITS Pilani
+          </span>
+          , I’ve built full-stack SaaS platforms, asynchronous processing
+          systems, and containerized Spring Boot services deployed to the cloud.
         </p>
-        <p className="py-1">
-          In my free time, I enjoy playing chess—aspiring to become a FIDE-rated
-          IM and exploring video games that spark creativity and
-          problem-solving.
+
+        <p>
+          My strengths lie in backend architecture, API integrations,
+          authentication flows, CI/CD pipelines, and designing systems that are
+          reliable and scalable.
         </p>
-        <p className="py-1">
-          My long-term goal is to grow as a well-rounded engineer, contributing
-          both as a developer and in DevOps, bridging the gap between code and
-          infrastructure to deliver scalable, reliable systems.
+
+        <p>
+          Outside engineering, I enjoy chess and strategic problem-solving —
+          disciplines that influence how I approach systems thinking and
+          decision-making.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

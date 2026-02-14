@@ -1,115 +1,119 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "./ui/badge";
-import { Dot, Link2 } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { SiGithub } from "react-icons/si";
 
 const projectDetails = [
   {
-    title: "Projectile Simulation",
-    stack: ["Spring Boot", "Next.js", "Docker", "Azure Container Apps"],
-    description:
-      "A web-based simulation tool that visualizes projectile motion based on user-defined physics parameters.",
-    features: [
-      "Backend in Spring Boot calculates trajectories with physics formulas.",
-      "Plots thousands of coordinates for real-time visualization.",
+    title: "SpendStats",
+    tagline: "AI-powered financial analytics SaaS",
+    stack: ["Next.js", "TypeScript", "Spring Boot", "PostgreSQL", "OAuth"],
+    highlights: [
+      "Parsed bank statement PDFs using LLM APIs",
+      "Secure multi-user auth with Google OAuth",
+      "Interactive analytics dashboard with filtering & CRUD",
+      "Designed scalable relational database schema",
     ],
-    hostedLink: "https://physics-simulations-five.vercel.app/",
-    githubLink: "https://github.com/Noname1122Q/physics-simulations",
-    isUnderDevelopment: false,
+    live: "",
+    github: "",
   },
   {
-    title: "Quizy",
-    stack: ["Next.js", "Gemini AI", "Tailwind CSS"],
-    description:
-      "An AI-powered platform to generate and attempt quizzes on any topic.",
-    features: [
-      "Generates quizzes using Gemini AI based on user prompts.",
-      "Shows post-quiz analytics with performance breakdowns.",
-      "Responsive design with smooth and intuitive UI.",
+    title: "YouTube Broadcaster",
+    tagline: "Multi-channel upload & analytics platform",
+    stack: ["Next.js", "YouTube API", "OAuth 2.0", "Scheduled Jobs"],
+    highlights: [
+      "Multi-account OAuth integration",
+      "Automated video scheduling system",
+      "Unified cross-channel analytics dashboard",
+      "Managed API orchestration & rate limits",
     ],
-    hostedLink: "https://quizy-flame.vercel.app/",
-    githubLink: "https://github.com/Noname1122Q/Quizy",
-    isUnderDevelopment: false,
+    live: "",
+    github: "",
   },
   {
-    title: "Effortless UI",
-    stack: ["Next.js", "ShadCN UI"],
-    description: "A personal component library for rapid UI development.",
-    features: [
-      "Collection of reusable UI components.",
-      "Quick integration with third-party services.",
-      "Reduces development time significantly.",
+    title: "Projectile Simulation Engine",
+    tagline: "Cloud-deployed physics computation backend",
+    stack: ["Spring Boot", "Docker", "Azure", "CI/CD"],
+    highlights: [
+      "High-performance trajectory computation engine",
+      "Containerized & deployed on Azure",
+      "Automated CI/CD pipelines",
+      "Real-time frontend visualization integration",
     ],
-    hostedLink: "",
-    githubLink: "https://github.com/Noname1122Q/EffortlessUI",
-    isUnderDevelopment: true,
+    live: "https://physics-simulations-five.vercel.app/",
+    github: "https://github.com/Noname1122Q/physics-simulations",
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="flex flex-col">
-      <h1 className="text-3xl my-4 font-semibold text-white">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
+    <section className="flex flex-col max-w-6xl">
+      <h1 className="text-3xl font-semibold text-white mb-8 tracking-tight">
+        Projects
+      </h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projectDetails.map((project, idx) => (
-          <Card key={idx} className="bg-transparent text-white border-gray-700">
-            <CardHeader>
-              <CardTitle className="flex justify-between items-center">
-                {project.title}
-                {project.isUnderDevelopment && (
-                  <span className="text-sm text-blue-400">
-                    (Under Development)
-                  </span>
-                )}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col">
-              <p className="text-gray-300 mb-3">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-3">
-                {project.stack.map((tech, i) => (
-                  <Badge
-                    key={i}
-                    className="bg-gray-700 text-gray-300 border-none rounded-full text-xs px-2 py-1"
-                  >
-                    {tech}
-                  </Badge>
-                ))}
+          <Card
+            key={idx}
+            className="bg-zinc-900/40 border border-zinc-800 p-6 rounded-xl transition hover:border-zinc-700 hover:shadow-lg"
+          >
+            <div className="flex justify-between items-start">
+              <div>
+                <h2 className="text-xl font-semibold text-white">
+                  {project.title}
+                </h2>
+                <p className="text-sm text-zinc-400 mt-1">{project.tagline}</p>
               </div>
-              <ul className="list-none space-y-1 text-gray-400 text-sm">
-                {project.features.map((feature, i) => (
-                  <li key={i} className="flex ">
-                    <Dot size={16} className="font-bold" /> {feature}
-                  </li>
-                ))}
-              </ul>
-              <div className="flex justify-start gap-4 mt-3">
-                {project.githubLink && (
+
+              <div className="flex gap-3">
+                {project.github && (
                   <Link
-                    href={project.githubLink}
+                    href={project.github}
                     target="_blank"
-                    className="text-gray-400 hover:text-white"
+                    className="text-zinc-400 hover:text-white"
                   >
-                    <SiGithub className="size-6" />
+                    <SiGithub size={18} />
                   </Link>
                 )}
-                {project.hostedLink && (
+                {project.live && (
                   <Link
-                    href={project.hostedLink}
+                    href={project.live}
                     target="_blank"
-                    className="text-gray-400 hover:text-white"
+                    className="text-zinc-400 hover:text-white"
                   >
-                    <Link2 className="size-6" />
+                    <ExternalLink size={18} />
                   </Link>
                 )}
               </div>
-            </CardContent>
+            </div>
+
+            <div className="flex flex-wrap gap-2 mt-4">
+              {project.stack.map((tech, i) => (
+                <Badge
+                  key={i}
+                  className="bg-zinc-800 text-zinc-300 border-none rounded-full text-xs px-3 py-1"
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+
+            <ul className="mt-4 space-y-2 text-sm text-zinc-400">
+              {project.highlights.map((point, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-zinc-500" />
+                  {point}
+                </li>
+              ))}
+            </ul>
           </Card>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,8 +1,9 @@
 "use client";
-import { DownloadCloud, Mail, MapPin, Phone } from "lucide-react";
+
+import { DownloadCloud, Mail, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 import { toast } from "sonner";
 import ProfileImage from "@/assets/profile.png";
 import Image from "next/image";
@@ -11,50 +12,70 @@ const Profile = () => {
   const onEmailCopy = () => {
     navigator.clipboard
       .writeText("uttamjangir1415@gmail.com")
-      .then(() => toast.success("Copied to Clipboard"));
+      .then(() => toast.success("Email copied to clipboard"));
   };
 
   return (
-    <div className="flex flex-col pt-10 pl-20 w-full lg:h-screen mb-8 lg:mb-0">
-      <Image src={ProfileImage} alt="" className="rounded-full size-36" />
-      <h1 className="text-2xl text-white font-semibold pt-4">Uttam Jangir</h1>
-      <p className="mb-3 text-sm text-gray-500">
-        Software Engineer | DevOps Enthusiast
-      </p>
-      <p className="text-sm text-gray-500 font-medium flex flex-row p-1">
-        <MapPin className="size-4 mr-2" /> Jhunjhunu, Rajasthan, India
-      </p>
-      <p className="text-sm text-gray-500 font-medium flex flex-row p-1">
-        <Mail
-          onClick={onEmailCopy}
-          className="size-4 mr-2 hover:scale-110 hover:cursor-pointer hover:text-white transition-colors duration-300"
-        />{" "}
-        uttamjangir1415@gmail.com
-      </p>
-      <p className="text-sm text-gray-500 font-medium flex flex-row p-1">
-        <Phone className="size-4 mr-2" /> +91 9257733088
+    <section className="flex flex-col pt-16 pl-10 md:pl-20 w-full lg:h-screen">
+      <Image
+        src={ProfileImage}
+        alt="Uttam Jangir"
+        className="rounded-full size-36 border border-zinc-800"
+      />
+
+      <h1 className="text-4xl font-bold text-white mt-6 tracking-tight">
+        Uttam Jangir
+      </h1>
+
+      <p className="mt-2 text-zinc-400 text-sm uppercase tracking-wide">
+        Software Engineer · Backend Focused
       </p>
 
-      <div className="flex mt-4">
-        <a href="/resume.pdf" download>
-          <Button
-            className="text-white rounded-sm bg-transparent"
-            variant={"outline"}
-          >
-            <DownloadCloud className="size-4 mr-2" />
-            Resume
-          </Button>
-        </a>
-        <div className="ml-4 flex items-center justify-center gap-2 text-gray-500">
-          <Link href={"https://github.com/Noname1122Q"}>
-            <SiGithub className="size-5 hover:text-white transition-colors duration-200" />
-          </Link>
-          <Link href={"https://www.linkedin.com/in/uttam-jangir/"}>
-            <SiLinkedin className="size-5 hover:text-white transition-colors duration-200" />
-          </Link>
+      <p className="mt-4 max-w-md text-zinc-400 text-sm leading-relaxed">
+        I build scalable backend systems and production-ready web applications
+        using Spring Boot, Next.js, and modern cloud infrastructure.
+      </p>
+
+      <div className="mt-6 space-y-2 text-sm text-zinc-500">
+        <div className="flex items-center gap-2">
+          <MapPin size={14} />
+          Jhunjhunu, Rajasthan, India
+        </div>
+
+        <div
+          onClick={onEmailCopy}
+          className="flex items-center gap-2 hover:text-white cursor-pointer transition"
+        >
+          <Mail size={14} />
+          uttamjangir1415@gmail.com
         </div>
       </div>
-    </div>
+
+      <div className="flex items-center gap-4 mt-6">
+        <a href="/Uttam_Jangir_Resume.pdf" download>
+          <Button className="rounded-md bg-zinc-800 hover:bg-zinc-700 text-white border-none">
+            <DownloadCloud className="size-4 mr-2" />
+            Download Resume
+          </Button>
+        </a>
+
+        <Link
+          href="https://github.com/Noname1122Q"
+          target="_blank"
+          className="text-zinc-500 hover:text-white transition"
+        >
+          <SiGithub size={20} />
+        </Link>
+
+        <Link
+          href="https://www.linkedin.com/in/uttam-jangir/"
+          target="_blank"
+          className="text-zinc-500 hover:text-white transition"
+        >
+          <SiLinkedin size={20} />
+        </Link>
+      </div>
+    </section>
   );
 };
 

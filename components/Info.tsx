@@ -4,17 +4,17 @@ import Skills from "./Skills";
 import Education from "./Education";
 import Experience from "./Experience";
 import Projects from "./Projects";
-import Certificates from "./Certificates";
+import Achievements from "./Achievements";
 
 const Info = () => {
   return (
-    <div className="w-full h-screen flex-1 pt-10 px-5">
+    <div className="w-full flex-1 pt-10 px-5 space-y-16">
       <About />
+      <Projects />
       <Skills />
       <Experience />
-      <Projects />
       <Education />
-      <Certificates />
+      <Achievements />
     </div>
   );
 };
