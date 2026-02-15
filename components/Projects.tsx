@@ -17,8 +17,8 @@ const projectDetails = [
       "Interactive analytics dashboard with filtering & CRUD",
       "Designed scalable relational database schema",
     ],
-    live: "",
-    github: "",
+    live: "https://spend-stats.vercel.app/",
+    github: "https://github.com/Noname1122Q/spend-stats",
   },
   {
     title: "YouTube Broadcaster",
@@ -31,7 +31,7 @@ const projectDetails = [
       "Managed API orchestration & rate limits",
     ],
     live: "",
-    github: "",
+    github: "https://github.com/Noname1122Q/youtube-automation",
   },
   {
     title: "Projectile Simulation Engine",
