@@ -2,9 +2,9 @@ import React from "react";
 
 const achievements = [
   {
-    title: "Winner – Website Design Competition",
+    title: "Winner - Website Design Competition",
     issuer: "College Web Design Club",
-    year: "2023",
+    year: "2025",
     description:
       "Awarded for designing and developing a responsive, user-focused web application under competitive constraints.",
   },
