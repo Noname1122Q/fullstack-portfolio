@@ -3,10 +3,11 @@
 import { DownloadCloud, Mail, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 import { toast } from "sonner";
 import ProfileImage from "@/assets/profile.png";
 import Image from "next/image";
+import { LuLinkedin } from "react-icons/lu";
 
 const Profile = () => {
   const onEmailCopy = () => {
@@ -72,7 +73,7 @@ const Profile = () => {
           target="_blank"
           className="text-zinc-500 hover:text-white transition"
         >
-          <SiLinkedin size={20} />
+          <LuLinkedin size={20} />
         </Link>
       </div>
     </section>
