@@ -8,17 +8,17 @@ import { SiGithub } from "react-icons/si";
 
 const projectDetails = [
   {
-    title: "SpendStats",
-    tagline: "AI-powered financial analytics SaaS",
-    stack: ["Next.js", "TypeScript", "Spring Boot", "PostgreSQL", "OAuth"],
+    title: "GitPulse",
+    tagline: "Real-time GitHub activity globe",
+    stack: ["Next.js", "GitHub API", "Canvas API", "React"],
     highlights: [
-      "Parsed bank statement PDFs using LLM APIs",
-      "Secure multi-user auth with Google OAuth",
-      "Interactive analytics dashboard with filtering & CRUD",
-      "Designed scalable relational database schema",
+      "3D globe rendering with 6,500-point Fibonacci lattice via raw Canvas",
+      "Live GitHub public event stream polled every 8s with rate-limit fallback",
+      "Per-country activity heatmap with animated intensity blobs",
+      "Repo search with shareable URLs — e.g. ?repo=vercel/next.js",
     ],
-    live: "https://spend-stats.vercel.app/",
-    github: "https://github.com/Noname1122Q/spend-stats",
+    live: "https://github-globe-steel.vercel.app/",
+    github: "https://github.com/Noname1122Q/github-globe",
   },
   {
     title: "YouTube Broadcaster",
