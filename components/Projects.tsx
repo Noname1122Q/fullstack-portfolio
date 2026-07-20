@@ -8,17 +8,17 @@ import { SiGithub } from "react-icons/si";
 
 const projectDetails = [
   {
-    title: "GitPulse",
-    tagline: "Real-time GitHub activity globe",
-    stack: ["Next.js", "GitHub API", "Canvas API", "React"],
+    title: "Resume Auto-Tailor",
+    tagline: "AI-powered ATS resume tailoring platform",
+    stack: ["Next.js", "Gemini AI", "Prisma", "NeonDB", "Cashfree"],
     highlights: [
-      "3D globe rendering with 6,500-point Fibonacci lattice via raw Canvas",
-      "Live GitHub public event stream polled every 8s with rate-limit fallback",
-      "Per-country activity heatmap with animated intensity blobs",
-      "Repo search with shareable URLs — e.g. ?repo=vercel/next.js",
+      "AI-powered resume tailoring from job descriptions",
+      "ATS-optimized PDF generation",
+      "Google OAuth authentication & subscription billing",
+      "Webhook-based payment verification",
     ],
-    live: "https://github-globe-steel.vercel.app/",
-    github: "https://github.com/Noname1122Q/github-globe",
+    live: "https://<your-domain>.vercel.app/",
+    github: "https://github.com/Noname1122Q/<your-repository>",
   },
   {
     title: "YouTube Broadcaster",
