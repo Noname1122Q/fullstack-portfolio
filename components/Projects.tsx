@@ -17,7 +17,7 @@ const projectDetails = [
       "Google OAuth authentication & subscription billing",
       "Webhook-based payment verification",
     ],
-    live: "https://<your-domain>.vercel.app/",
+    live: "https://resume-tailor-six-kappa.vercel.app/",
     github: "https://github.com/Noname1122Q/<your-repository>",
   },
   {
@@ -31,7 +31,7 @@ const projectDetails = [
       "Managed API orchestration & rate limits",
     ],
     live: "",
-    github: "https://github.com/Noname1122Q/youtube-automation",
+    github: "",
   },
   {
     title: "Projectile Simulation Engine",
