@@ -18,7 +18,7 @@ const projectDetails = [
       "Webhook-based payment verification",
     ],
     live: "https://resume-tailor-six-kappa.vercel.app/",
-    github: "https://github.com/Noname1122Q/<your-repository>",
+    github: "",
   },
   {
     title: "YouTube Broadcaster",
